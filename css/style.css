@@ -674,23 +674,34 @@ ol {
   padding: 100px 0;
 }
 .footer .container {
-  display: flex;
+  padding: 0 15px;
+  /* display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: baseline;
-  row-gap: 72px;
+  row-gap: 72px; */
 }
 
 @media only screen and (min-width: 768px) {
   .footer .container {
-    column-gap: 24px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
+    align-items: baseline;
+    column-gap: 24px;
+    row-gap: 72px;
   }
 }
 @media only screen and (min-width: 1158px) {
   .footer .container {
     column-gap: 0px;
     justify-content: flex-start;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container-logo-footer {
+    /* margin-right: 120px; */
   }
 }
 
@@ -728,6 +739,7 @@ ol {
   letter-spacing: 0.02em;
   color: var(--logo-color-footer);
   max-width: 264px;
+  margin: 0 auto 72px;
 }
 
 @media only screen and (min-width: 1158px) {
@@ -742,12 +754,20 @@ ol {
   letter-spacing: 0.02em;
   color: var(--background-color);
   text-align: center;
-  margin-bottom: 16px;
+  margin: 0 auto 16px;
+}
+
+@media only screen and (min-width: 768px) {
+  .social-title {
+    text-align: left;
+  }
 }
 
 .footer-social-list {
   display: flex;
+  justify-content: center;
   gap: 16px;
+  margin-bottom: 72px;
 }
 .footer-social-item {
   width: 40px;
@@ -777,14 +797,13 @@ ol {
   color: var(--text-color);
 }
 .subscribe-container {
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 @media only screen and (min-width: 768px) {
   .subscribe-container {
-    display: block;
   }
 }
 
@@ -793,17 +812,27 @@ ol {
   line-height: 1.5; /* 150% */
   letter-spacing: 0.02em;
   color: #ffffff;
-  margin-bottom: 16px;
+  margin: 0 auto 16px;
+  text-align: center;
 }
-.subscribe-form {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 24px;
+
+@media only screen and (min-width: 768px) {
+  .subscribe-title {
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .subscribe-form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
 }
 .subscribe-input {
   max-width: 398px;
-  min-width: 320px;
+  width: 100%;
+  margin: 0 auto 16px;
   /* width: 398px; */
   height: 40px;
   border: 1px solid #ffffff;
@@ -843,6 +872,7 @@ ol {
   border: none;
   padding-left: 24px;
   padding-right: 24px;
+  margin: 0 auto;
 }
 @media only screen and (min-width: 1158px) {
   .subscribe-button {
