@@ -136,12 +136,164 @@
 
 // console.log(bookShelf.name[1]);
 
-const animals = {
-    'legs': 4,
-}; console.log(animals);
+// const animals = {
+//     'legs': 4,
+// }; console.log(animals);
 
-const dogs = Object.create(animals);
-dogs.name = 'Jack'
-console.log(dogs);
-console.log(dogs.legs);
-console.log(dogs['legs']);
+// const dogs = Object.create(animals);
+// dogs.name = 'Jack'
+// console.log(dogs);
+// console.log(dogs.legs);
+// console.log(dogs['legs']);
+
+// console.log('name' in dogs);
+// console.log('legs' in dogs);
+// console.log(dogs.hasOwnProperty('name'));
+// console.log(dogs.hasOwnProperty('legs'));
+
+// for (key in dogs) {
+//     if (dogs.hasOwnProperty(key)) {
+//         console.log(`this own property ${key}`);
+//         console.log(`this own value ${dogs[key]}`);
+//     } else {console.log(`this not own property ${key}`);
+//         console.log(`this not own value ${dogs[key]}`);}
+// }
+
+// console.log(Object.keys(dogs));
+// console.log(Object.values(dogs));
+// console.log(Object.entries(dogs));
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "На березі спокійних вод",
+//     author: "Роберт Шеклі",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "Сон смішної людини",
+//     author: "Федір Достоєвський",
+//     rating: 7.75,
+//   },
+// ];
+
+// for (const book of books) {
+//     console.log(book.title);
+// }
+
+
+// const apartment = {
+//   imgUrl: "https://via.placeholder.com/640x480",
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+//   tags: ["premium", "promoted", "top"],
+//   owner: {
+//     name: "Henry",
+//     phone: "982-126-1588",
+//     email: "henry.carter@aptmail.com",
+//   },
+// };
+
+// // Change code below this line
+// const ownerName = apartment.owner.name;
+// const ownerPhone = apartment.owner.phone;
+// const ownerEmail = apartment.owner.email;
+// const numberOfTags = apartment.tags.length;
+// const firstTag = apartment.tags[0];
+// const lastTag = apartment.tags[apartment.tags.length-1];
+// // Change code above this line
+// console.log(ownerName);
+// console.log(ownerPhone);
+// console.log(ownerEmail);
+// console.log(numberOfTags);
+// console.log(firstTag);
+// console.log(lastTag);
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+// const value = [];
+
+// function getAllPropValues(propName) {
+//   // Change code below this line
+//     const keys = Object.keys(products[1]);
+    
+  
+//   // Change code above this line
+// }
+// getAllPropValues()
+
+// // Change code below this line
+// function add(...args) {
+//     console.log(args);
+//   // Change code above this line
+// }
+// add(1, 2, 3, 5, 4);
+
+// const bookShelf = {
+//   books: ["The last kingdom", "Haze", "The guardian of dreams"],
+//   updateBook(oldName, newName) {
+//       // Change code below this line
+//       this.books.splice(this.books.indexOf(oldName), 1, newName);
+//     // Change code above this line
+//   },
+// };
+// bookShelf.updateBook("Haze","Hazer");
+
+const atTheOldToad = {
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Dragon breath", price: 780 },
+    { name: "Stone skin", price: 520 },
+  ],
+  // Change code below this line
+  getPotions() {
+    return this.potions;
+  },
+  addPotion(newPotion) {
+      
+        for (const iterator of this.potions) {
+            console.log(iterator);
+            if (iterator.name === newPotion.name) { return `Error! Potion ${newPotion.name} is already in your inventory!`}
+        }   
+      this.potions.push(newPotion);    
+  },
+  removePotion(potionName) {    
+    for (let i = 0; i < this.potions.length; i += 1) {
+      console.log(this.potions[i]);
+       if (this.potions[i].name === potionName) {
+         this.potions.splice(i, 1);
+         return `Potion ${potionName} has been removed from inventory.`;
+      }
+      }
+    return `Potion ${potionName} is not in inventory!`;
+  },
+
+
+   updatePotionName(oldName, newName) {
+       for (let i = 0; i < this.potions.length; i += 1) {
+      console.log(this.potions[i]);
+       if (this.potions[i].name === oldName) {
+         this.potions[i].name = newName;
+         return `Potion ${oldName} has been removed from inventory.`;
+      }
+      }
+    return `Potion ${oldName} is not in inventory!`;
+  },
+
+
+  
+  // Change code above this line
+};
+
+console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"));
+console.log(atTheOldToad.getPotions());
+
