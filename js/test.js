@@ -362,86 +362,158 @@
 // console.log(evenNumbers);
 // console.log(oddNumbers);
 
-const users =
+// const users =
 
-[
-  {
-    name: "Moore Hensley",
-    email: "moorehensley@indexia.com",
-    eyeColor: "blue",
-    friends: ["Sharron Pace"],
-    isActive: false,
-    balance: 2811,
-    gender: "male",
-    age: 37
-  },
-  {
-    name: "Sharlene Bush",
-    email: "sharlenebush@tubesys.com",
-    eyeColor: "blue",
-    friends: ["Briana Decker", "Sharron Pace"],
-    isActive: true,
-    balance: 3821,
-    gender: "female",
-    age: 34
-  },
-  {
-    name: "Ross Vazquez",
-    email: "rossvazquez@xinware.com",
-    eyeColor: "green",
-    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
-    isActive: false,
-    balance: 3793,
-    gender: "male",
-    age: 24
-  },
-  {
-    name: "Elma Head",
-    email: "elmahead@omatom.com",
-    eyeColor: "green",
-    friends: ["Goldie Gentry", "Aisha Tran"],
-    isActive: true,
-    balance: 2278,
-    gender: "female",
-    age: 21
-  },
-  {
-    name: "Carey Barr",
-    email: "careybarr@nurali.com",
-    eyeColor: "blue",
-    friends: ["Jordan Sampson", "Eddie Strong"],
-    isActive: true,
-    balance: 3951,
-    gender: "male",
-    age: 27
-  },
-  {
-    name: "Blackburn Dotson",
-    email: "blackburndotson@furnigeer.com",
-    eyeColor: "brown",
-    friends: ["Jacklyn Lucas", "Linda Chapman"],
-    isActive: false,
-    balance: 1498,
-    gender: "male",
-    age: 38
-  },
-  {
-    name: "Sheree Anthony",
-    email: "shereeanthony@kog.com",
-    eyeColor: "brown",
-    friends: ["Goldie Gentry", "Briana Decker"],
-    isActive: true,
-    balance: 2764,
-    gender: "female",
-    age: 39
-  }
-]
+// [
+//   {
+//     name: "Moore Hensley",
+//     email: "moorehensley@indexia.com",
+//     eyeColor: "blue",
+//     friends: ["Sharron Pace"],
+//     isActive: false,
+//     balance: 2811,
+//     gender: "male",
+//     age: 37
+//   },
+//   {
+//     name: "Sharlene Bush",
+//     email: "sharlenebush@tubesys.com",
+//     eyeColor: "blue",
+//     friends: ["Briana Decker", "Sharron Pace"],
+//     isActive: true,
+//     balance: 3821,
+//     gender: "female",
+//     age: 34
+//   },
+//   {
+//     name: "Ross Vazquez",
+//     email: "rossvazquez@xinware.com",
+//     eyeColor: "green",
+//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//     isActive: false,
+//     balance: 3793,
+//     gender: "male",
+//     age: 24
+//   },
+//   {
+//     name: "Elma Head",
+//     email: "elmahead@omatom.com",
+//     eyeColor: "green",
+//     friends: ["Goldie Gentry", "Aisha Tran"],
+//     isActive: true,
+//     balance: 2278,
+//     gender: "female",
+//     age: 21
+//   },
+//   {
+//     name: "Carey Barr",
+//     email: "careybarr@nurali.com",
+//     eyeColor: "blue",
+//     friends: ["Jordan Sampson", "Eddie Strong"],
+//     isActive: true,
+//     balance: 3951,
+//     gender: "male",
+//     age: 27
+//   },
+//   {
+//     name: "Blackburn Dotson",
+//     email: "blackburndotson@furnigeer.com",
+//     eyeColor: "brown",
+//     friends: ["Jacklyn Lucas", "Linda Chapman"],
+//     isActive: false,
+//     balance: 1498,
+//     gender: "male",
+//     age: 38
+//   },
+//   {
+//     name: "Sheree Anthony",
+//     email: "shereeanthony@kog.com",
+//     eyeColor: "brown",
+//     friends: ["Goldie Gentry", "Briana Decker"],
+//     isActive: true,
+//     balance: 2764,
+//     gender: "female",
+//     age: 39
+//   }
+// ]
 
 
-const getFriends = (users) => {
-  const allFriends = users.flatMap(user => user.friends);
-  const uniqFriends = allFriends.filter((friends, idx) => idx===allFriends.indexOf(friends))
-  return  uniqFriends;
-};
+// const getFriends = (users) => {
+//   const allFriends = users.flatMap(user => user.friends);
+//   const uniqFriends = allFriends.filter((friends, idx) => idx===allFriends.indexOf(friends))
+//   return  uniqFriends;
+// };
 
-console.log(getFriends(users));
+// console.log(getFriends(users));
+
+// const array = [4,3,9,25,5]
+
+// function squareOrSquareRoot(array) {
+//   const newArr=array.map(el => {
+//     const elSqrt = Math.sqrt(el);
+//     if (Number.isInteger(elSqrt)){
+//       return elSqrt
+//     } else {return el**2}
+// })
+// return newArr; 
+// }
+
+// squareOrSquareRoot(array)
+
+// console.log(Number.isInteger(3.3));
+
+
+/* У цій ката ви повинні просто визначити, чи є даний рік високосним роком чи ні. Якщо ви не знаєте правил, ось вони:
+
+Роки, що діляться на 4, - високосні роки,
+але роки, що діляться на 100, не високосні роки,
+але роки, що діляться на 400, - високосні роки.
+Випробувані роки знаходяться в діапазоні 1600 ≤ рік ≤ 4000.*/
+
+// function isLeapYear(year) {
+//   if (!(year % 400)) {
+//     return true
+//   } if (!(year % 100)) {
+//       return false
+//   } if (!(year % 4)) {
+//     return true
+//   } else { return false } 
+//   }
+
+// const isLeapYear = year => !(year % 400) ? true : !(year % 100) ? false : !(year % 4) ? true : false;
+
+//https://www.codewars.com/kata/6405f2bb2894f600599172fd/train/javascript
+//кількість точок на доміно
+
+// function costStone(number) {
+//   let countDots = 0
+//   for (let i = 0; i <= number; i++) {    
+//     for (let j = i; j <= number; j++) {
+//       countDots = countDots + i + j    
+//     }
+//   }
+//  return countDots;
+// }
+
+/*Напишіть функцію, яка об'єднує два відсортовані масиви в один. Масиви містять лише цілі числа. 
+Також кінцевий результат повинен бути відсортований і не мати ніяких дублікатів.*/
+// const a = [1, 7,8, 2, 4];
+// const b = [3, 5, 1];
+
+
+// function mergeArrays(a=[], b=[]) {
+//   const c = [];
+//     for (const i of a) {
+//     c.push(i)
+//   }
+  
+//   for (let i = 0; i < b.length; i++) {
+//     if (!c.includes(b[i])) {c.push(b[i])}    
+//   }
+//   c.sort((a, b) => {
+//     return a - b;
+//   })
+//   return c
+// }
+// console.log(mergeArrays(a));
+
